@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <style>
+.register{
+    background-image: url("gu_image.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 3%;
+    padding: 3%;
+}
+.register-left{
+    text-align: center;
+    color: #fff;
+    margin-top: 4%;
+}
+.register-left input{
+    border: none;
+    border-radius: 1.5rem;
+    padding: 2%;
+    width: 60%;
+    background: #f8f9fa;
+    font-weight: bold;
+    color: #383d41;
+    margin-top: 30%;
+    margin-bottom: 3%;
+    cursor: pointer;
+}
+.register-right{
+    background: #f8f9fa;
+    border-top-left-radius: 10% 50%;
+    border-bottom-left-radius: 10% 50%;
+}
+.register-left img{
+   
+    margin-bottom: 5%;
+    width: 40%;
+    -webkit-animation: mover 2s infinite  alternate;
+    animation: mover 1s infinite  alternate;
+}
+
+.register-left p{
+    font-weight: lighter;
+    padding: 12%;
+    margin-top: -9%;
+}
+.register .register-form{
+    padding: 10%;
+    margin-top: 10%;
+}
+.btnRegister{
+    float: right;
+    margin-top: 30%;
+    border: none;
+    border-radius: 1.5rem;
+    padding: 2%;
+    background: #0062cc;
+    color: #fff;
+    font-weight: 600;
+    width: 50%;
+    cursor: pointer;
+}
+.register .nav-tabs{
+    margin-top: 3%;
+    border: none;
+    background: #0062cc;
+    border-radius: 1.5rem;
+    width: 28%;
+    float: right;
+}
+.register .nav-tabs .nav-link{
+    padding: 2%;
+    height: 34px;
+    font-weight: 600;
+    color: #fff;
+    border-top-right-radius: 1.5rem;
+    border-bottom-right-radius: 1.5rem;
+}
+.register .nav-tabs .nav-link:hover{
+    border: none;
+}
+.register .nav-tabs .nav-link.active{
+    width: 100px;
+    color: #0062cc;
+    border: 2px solid #0062cc;
+    border-top-left-radius: 1.5rem;
+    border-bottom-left-radius: 1.5rem;
+}
+.register-heading{
+    text-align: center;
+    margin-top: 8%;
+    margin-bottom: -15%;
+    color: #495057;
+}
+        </style>
+        <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+        <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        
+<div class="container register">
+                <div class="row">
+                    <div class="col-md-3 register-left">
+                        <img src="Gu_logo.png" alt="logo"/>
+                        <h1 style="padding-top:100px;font-family:Monaco;">INFO-FEST 2023</h1>
+                        <br/>
+                    </div>
+                    <div class="col-md-9 register-right">
+                        
+                        <div class="tab-content" id="myTabContent">
+                            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                                <h3 class="register-heading">REGISTRATION</h3>
+                                <form onsubmit="return handleSubmit()">
+                                <div class="row register-form">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" id="fname" placeholder="First Name..." value="" required/>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="email" class="form-control" id="email" placeholder="Your Email..." value="" required/>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" id="team_name" placeholder="Team Name..." value="" required/>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" id="Team_count" placeholder="Team strangth..." value="" required/>
+                                        </div>
+                                        
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" id="lname" placeholder="Last Name..." value="" />
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="text" minlength="10" maxlength="10" name="txtEmpPhone" class="form-control" id="phno" placeholder="Your Phone..." value="" />
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="text"  maxlength="10" name="txtEmpPhone" class="form-control"  id="cllgname" placeholder="College Name..." value="" />
+                                        </div>
+                                        <div class="form-group">
+                                            <select id="event" class="form-control">
+                                                <option class="hidden"  selected disabled >Select Event</option>
+                                                <option value="Hackathon">Hackathon (24 hrs)</option>
+                                                <option value="AI Quiz">AI Quiz</option>
+                                                <option value="Maze solver">Maze solver</option>
+                                                <option value="Blind Coding">Blind Coding</option>
+                                            </select>
+                                        </div>
+                                        
+                                        <input type="submit" class="btnRegister"  value="Register"/>
+                                    </div>
+                                </div>
+                                    </form>
+                            </div>
+                           
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <!-- Bootstrap JS -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+        <script>
+		function handleSubmit() {
+			// Get form values
+			var fname = document.getElementById("fname").value;
+                        var lname = document.getElementById("lname").value;
+                        var event = document.getElementById("event").value;
+                        var cllgname = document.getElementById("cllgname").value;
+                        var phno = document.getElementById("phno").value;
+                        var Team_count = document.getElementById("Team_count").value;
+                        var team_name = document.getElementById("team_name").value;
+			var email = document.getElementById("email").value;
+
+			// Save form values to localStorage
+			localStorage.setItem("fname", fname);
+			localStorage.setItem("email", email);
+                        localStorage.setItem("lname", lname);
+			localStorage.setItem("event", event);
+                        localStorage.setItem("Team_count", Team_count);
+			localStorage.setItem("team_name", team_name);
+                        localStorage.setItem("cllgname", cllgname);
+			localStorage.setItem("phno", phno);
+
+			// Redirect to new page
+			window.location.href = "Response.html";
+
+			// Prevent form submission
+			return false;
+		}
+	</script>
+    </body>
+</html>

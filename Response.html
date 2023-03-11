@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this template
+-->
+<html>
+    <head>
+        <style>
+            ul{
+                background-color: beige;            }
+        </style>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    </head>
+    <body>
+        <div class="container">
+		<h1>Response Recorded: </h1>
+		<p>Here is what you submitted: </p>
+		<ul>
+			<li>First Name: <span id="fname"></span></li>
+			<li>Last Name: <span id="lname"></span></li>
+                        <li>Email ID: <span id="email"></span></li>
+                        <li>Phone Number: <span id="phno"></span></li>
+			<li>Team Name: <span id="team_name"></span></li>
+                        <li>College Name: <span id="cllgname"></span></li>
+			<li>Team strength: <span id="Team_count"></span></li>
+                        <li>Event Participating: <span id="event"></span></li>
+			
+		</ul>
+	</div>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+        <script>
+		// Retrieve form data from localStorage
+		
+                        var fname = localStorage.getItem("fname");
+			var email = localStorage.getItem("email");
+                       var lname =  localStorage.getItem("lname");
+			var event = localStorage.getItem("event");
+                        var Team_count = localStorage.getItem("Team_count");
+			var team_name = localStorage.getItem("team_name");
+                        var cllgname = localStorage.getItem("cllgname");
+			var phno = localStorage.getItem("phno");
+
+		// Update HTML with form data
+	document.getElementById("fname").innerHTML = fname;
+	document.getElementById("email").innerHTML = email;
+        document.getElementById("lname").innerHTML = lname;
+	document.getElementById("event").innerHTML = event;
+        document.getElementById("Team_count").innerHTML = Team_count;
+	document.getElementById("team_name").innerHTML = team_name;
+        document.getElementById("cllgname").innerHTML = cllgname;
+	document.getElementById("phno").innerHTML = phno;
+
+	// Clear localStorage
+	localStorage.clear();
+</script>
+    </body>
+</html>
